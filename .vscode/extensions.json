@@ -3,3 +3,23 @@
         "aikidosecurity.aikido"
     ]
 }
+
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+
+    // Label definition
+    loop_start: 
+
+    if (i <= 5) {
+        printf("%d ", i);
+        i++;
+        // Jump to the 'loop_start' label
+        goto loop_start; 
+    }
+
+    printf("\nEnd of program.\n");
+
+    return 0;
+}
